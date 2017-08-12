@@ -64,10 +64,10 @@ function toShop(time) {
     var offsetBoy = $boy.offset();
     var boyOffsetLeft = offsetBoy.left;
 
-    instanceX = (doorOffsetLeft + door.width() / 2);
+    instanceX = (doorOffsetLeft + door.width() / 2) - (boyOffsetLeft+$boy.width()/2);
 
     var walkPlay = run({
-        transform: "translateX(' + instanceX + 'px),scale(0.3,0.3)",
+        transform: 'translateX(' + instanceX + 'px),scale(0.3,0.3)',
         opacity: 0.1
     }, 2000);
 
@@ -95,4 +95,15 @@ function outShop(runTime) {
 
     return defer;
 
+}
+
+function takeFlower() {
+    //增加等待延时效果
+    var defer = $.Deferred();
+
+    setTimeout(function () {
+        $boy.addClass('slowFlowerWalk');
+        defer.resolve();
+    }, 900);
+    return defer;
 }

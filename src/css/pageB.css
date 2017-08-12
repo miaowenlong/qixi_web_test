@@ -50,3 +50,52 @@
     background: url("../../images/door-right.png");
     background-size: 100% 100%;
 }
+
+
+.slowFlowerWalk {
+    -webkit-animation-name: person-flower-slow;
+    -webkit-animation-duration: 950ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: steps(1, start);
+
+    -moz-animation-name: person-flower-slow;
+    -moz-animation-duration: 950ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: steps(1, start);
+}
+
+@-webkit-keyframes person-flower-slow {
+    0%{
+        background-position: -453px -0px;
+    }
+    25%{
+        background-position: -904px -00px;
+    }
+    50%{
+        background-position: -451px -0px;
+    }
+    75%{
+        background-position: -753px -0px;
+    }
+    100%{
+        background-position: -300px -0px;
+    }
+}
+
+@-moz-keyframes person-flower-slow {
+    0% {
+        background-position: -453px -0px;
+    }
+    25% {
+        background-position: -904px -0px;
+    }
+    50% {
+        background-position: -451px -0px;
+    }
+    75% {
+        background-position: -753px -0px;
+    }
+    100% {
+        background-position: -300px -0px;
+    }
+}
